@@ -58,11 +58,11 @@ webmaster_verifications:
 
 # Web Analytics Settings
 analytics:
-<<<<<<< HEAD
+  google: 
+  <<<<<<< HEAD
   google: 
 =======
   google:
->>>>>>> 82cc10bef20322b60dd643176f6c56dae2ffb31f
     id: ${{ secrets.GOOGLE_ANALYTICS_ID }} # fill in your Google Analytics ID
   goatcounter:
     id: # fill in your GoatCounter ID
