@@ -11,7 +11,11 @@ lang: en, he-IL
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone:
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# jekyll-seo-tag settings › https://g
+
+
+
+ithub.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
 title: Cyterous # the main title
@@ -99,6 +103,7 @@ cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: /cyterous_avatar.png
+avatar_size: 80px
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
