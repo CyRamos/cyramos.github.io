@@ -11,11 +11,11 @@ lang: en, he-IL
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone:
 
-# jekyll-seo-tag settings › https://g
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 
 
 
-ithub.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+
 # ↓ --------------------------
 
 title: Cyterous # the main title
