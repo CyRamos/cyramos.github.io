@@ -1,0 +1,6 @@
+.site-avatar img {
+    width: 80px;  
+    height: 80px; 
+    max-width: 100%;
+    border-radius: 50%; 
+}
