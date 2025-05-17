@@ -88,7 +88,7 @@ Another hacktivist group known for executing DDoS attacks and website defacement
 
 
 ## Expanding the Search: What Else Is Out There?
-Finally, all the above, I searched for some of the groups (mostly DXPLOITMY) on several other platforms such as [defacer.net](http://defacer.net), [OTX Alienvault](https://otx.alienvault.com/), [Threatcrowd](http://ci-www.threatcrowd.org/) without any findings except this Medium report ‘[Emerging Hacktivist Group: DXPLOIT](Emerging Hacktivist Group: DXPLOIT)’.
+Finally, all the above, I searched for some of the groups (mostly DXPLOITMY) on several other platforms such as [defacer.net](http://defacer.net), [OTX Alienvault](https://otx.alienvault.com/), [Threatcrowd](http://ci-www.threatcrowd.org/) without any findings except this Medium report ‘[Emerging Hacktivist Group: DXPLOIT](https://sanaholadeji.medium.com/emerging-hacktivist-group-dxploit-4b242c94a4d7)’.
 
 Tracking hacktivist activity through Telegram and open-source tools offers valuable insight.
 When monitoring DDoS campaigns:
