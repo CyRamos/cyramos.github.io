@@ -24,7 +24,7 @@ At first glance, a single Telegram message from a cybercrime channel might seem 
 In this post, we’ll break down an actual message shared in a Telegram channel linked to DXPLOITMY. We’ll explore what makes it interesting, what clues it offers about the group’s activity, and how even a brief post can spark a deeper investigation.
 
 ## DXPLOITMY’s Role in the OpIsrael Timeline
-The post is taken from the @DXPLOITMY Telegram channel.
+The post is taken from the `@DXPLOITMY` Telegram channel.
 We could notice the actions were mentioned as part of activities related to the OPIsrael event—mostly during April—and this specific attack was on 14 Jan 2025. (“OpIsrael is an annual coordinated cyber-attack where hacktivists attack Israeli government and even private websites with DDoS attacks and more.”)
 
 ## Verifying the Attack: Was the Website Really Down?
