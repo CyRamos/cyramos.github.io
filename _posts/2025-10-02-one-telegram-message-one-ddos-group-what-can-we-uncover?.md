@@ -10,8 +10,6 @@ tags:
     - CTI
 ---
 
-# One Telegram Message, One DDoS Group: What Can We Uncover?
-
 ## What Can We Learn from Cybercrime Forum Posts?
 When browsing through cybercrime forums or encrypted messaging platforms, have you ever stopped to really examine what’s being shared? These posts—often written in coded language or filled with technical jargon—can contain a goldmine of information for investigators and analysts. But what exactly makes them so interesting? And more importantly, what kind of details can we extract from them to push an investigation forward?
 In this post, we’ll take a closer look at real examples and break down how to interpret them, identify key indicators, and leverage their contents for deeper cyber threat intelligence.
@@ -30,11 +28,12 @@ We could notice the actions were mentioned as part of activities related to the 
 ## Verifying the Attack: Was the Website Really Down?
 According to [check-host](https://check-host.net/check-report/223da56akbc5) report show the servers went down on Tue Jan 14 07:40:58 UTC 2025, the same date DXPLOITMY posted there post. I do want to mention that although the threat group published on Telegram that the website was "can’t be reached", This doesn’t necessarily mean the attackers succeeded. In some cases, asset owners may detect the attack in advance and implement proactive blocking measures. These may include automated defenses or policy-based restrictions based on geographic location. As a result, the attacker may be denied access to the website and perceive it as offline, even though it remains operational. Second, The attackers targeted a subdomain, not the entire website.
 
-![image](https://github.com/user-attachments/assets/323edfd2-013e-4df2-bd79-880808263c49){: .left }
+![image](https://github.com/user-attachments/assets/323edfd2-013e-4df2-bd79-880808263c49)
 _During the attack_
 
-![image](https://github.com/user-attachments/assets/1f601797-aeb7-43fd-ab46-9a0de527a3c5){: .right }
+![image](https://github.com/user-attachments/assets/1f601797-aeb7-43fd-ab46-9a0de527a3c5)
 _Original State_
+
 
 ## Beyond DDoS: Looking for Additional Clues
 I checked the Wayback Machine for unusual changes around these dates for [https://education.histadrut.org.il/](https://education.histadrut.org.il/) to understand another activity except the DDOS without any findings. 
@@ -45,7 +44,11 @@ I checked the Wayback Machine for unusual changes around these dates for [https:
 [NoName057(16)](https://malpedia.caad.fkie.fraunhofer.de/actor/noname057(16)) [aka 05716nnm, Nnm05716, NoName057, NoName05716) are pro-russian hacktivist group performing DDoS attacks on websites belonging to governments, armies etc in Ukraine and other countries supporting Ukraine. The group developed software named ‘[DDOSIA](https://www.radware.com/security/threat-advisories-and-attack-reports/project-ddosia-russias-answer-to-disbalancer/)’ conducting DDoS attacks.
 Fortunately, we could track for `win_dosia_w0` with [YARA](https://malpedia.caad.fkie.fraunhofer.de/details/win.dosia): 
 
-```yara [TLP:WHITE] win_dosia_w0 (20230615 | No description)
+```yara
+/*
+    [TLP:WHITE] win_dosia_w0 (20230615 | No description)
+*/
+
 rule win_dosia_w0 {
     meta:
         author = "B42 Labs"
@@ -83,8 +86,8 @@ Additionally I looked into Telegram for searching the other alliance’s groups.
 #Overflame - seems it belongs to Russian Legion Z  | RKN: No. 5047147078
 Another hacktivist group known for executing DDoS attacks and website defacements, primarily targeting government institutions and corporations in Europe and North America.
 
-![image](https://github.com/user-attachments/assets/74aad262-c7d5-49c6-a702-0ab4f28a23e1){: .left }
-![image](https://github.com/user-attachments/assets/438c77b3-1b82-4ba1-bd46-29d4b673a6a1){: .right }
+![image](https://github.com/user-attachments/assets/74aad262-c7d5-49c6-a702-0ab4f28a23e1)
+![image](https://github.com/user-attachments/assets/438c77b3-1b82-4ba1-bd46-29d4b673a6a1)
 
 
 ## Expanding the Search: What Else Is Out There?
