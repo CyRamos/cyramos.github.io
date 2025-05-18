@@ -32,9 +32,8 @@ to the United Kingdom, Canada and the others. The three most active RaaS groupsâ
 At this point, we know the share of financial organizations worldwide hit by ransomware attacks from 2021 to 2024. We know LockBit is one of the most active ransomware actors using RaaS models to expand their activities and genes. We notice the United States, especially North America, is targeted number 1 by LockBit. Now, let's correlate our data even more and look into the top six industries
 targeted by ransomware families in Q1 of 2024.
 
-After we revealed that LockBit is one of the most active ransomware threat actors for the Financial industry, expanding and developing more every year, we have to understand how to defend our systems. For solving this we need to understand how the LockBit operator works on the surface. 
 ![image](https://github.com/user-attachments/assets/230bee11-4e7d-456e-99a1-7fa88b11335a){: .right }
-
+After we revealed that LockBit is one of the most active ransomware threat actors for the Financial industry, expanding and developing more every year, we have to understand how to defend our systems. For solving this we need to understand how the LockBit operator works on the surface. 
 
 
 
