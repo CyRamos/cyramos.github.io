@@ -33,8 +33,7 @@ At this point, we know the share of financial organizations worldwide hit by ran
 targeted by ransomware families in Q1 of 2024.
 
 ![image](https://github.com/user-attachments/assets/230bee11-4e7d-456e-99a1-7fa88b11335a){: .right }{: width="400" height="200" }
-After we revealed that LockBit is one of the most active ransomware threat actors for the Financial industry, expanding and developing more every year, we have to understand how to defend our systems. For solving this we need to understand how the LockBit operator works on the surface. 
-
+After we revealed that LockBit is one of the most active ransomware threat actors for the Financial industry, expanding and developing more every year, we have to understand how to defend our systems. For solving this we need to understand how the LockBit operator works on the surface. <br>
 
 ## Defensive Measures: How to Prepare for LockBit
 As LockBit continues to evolve and expand its reach—especially in targeting financial institutions—defenders must be prepared. In this section, we’ll break down recommended actions into two parts: general security practices every organization should follow, and specific techniques to mitigate known LockBit attack vectors.
