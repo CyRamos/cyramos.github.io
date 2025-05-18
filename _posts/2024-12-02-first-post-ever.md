@@ -1,27 +1,40 @@
 ---
-titile: "First Post Ever"
-date: 2024-12-02 00:14:00
+titile: "Why Financial Institutions Should Watch LockBit in 2025?"
+date: 2025-02-12
 categories: 
-
-tags: 
-
+  - Threat Intelligence
+tags:
+  - LockBit
+  - Ransomware
 ---
 
-# My First Post
+If you're advising clients in the financial sector—especially those based in North America—one question should be front and center as we head into 2025: Which ransomware group poses the biggest threat this year? With threat actors constantly evolving, understanding the most active and dangerous groups is critical for proactive defense. In this post, we'll take a focused look at one such actor: `LockBit`. We'll explore why it's a top threat to financial organizations, break down its tactics and tools, uncover its dark web activity, and highlight key indicators defenders should monitor closely.
 
-This is a new post
+## The Rising Threat of Ransomware to the Financial Sector
+Ransomware remains one of the most significant cybersecurity threats these days. Threat groups evolve their techniques and expand. Every year there’s a raise of victims with targeted attacks across various sectors, today we want to focus on the Financial sector.
+As we can see below, the graph points to the share of financial organizations worldwide hit by ransomware attacks from 2021 to 2024.
+
+![image](https://github.com/user-attachments/assets/50c6ae5b-d0b3-4deb-a0c7-613454bb99e5)
+
+## LockBit: A Leading RaaS Operator in 2024
+One of the most active threat actor groups adopting new models, lowering the barrier to entry for new attackers and expanding the scope of ransomware operations. This model is called “Ransomware as a service” or RaaS. Raas supplied infrastructure to new players getting in and attacking from day one without having unique development skills. This threat actor is called ‘LockBit’ and they one of the most active actors these days. On the graph below there are the number of victims declared by the top three RaaS groups per month in Q1 of 2024.
+
+![image](https://github.com/user-attachments/assets/eb97fa57-a25a-4a49-b7b6-fcbf42893962)
+
+## North America in the Crosshairs
+The United States is the most targeted country by RaaS groups, leak sites analysis (by Tred threat intelligence) revealing 521 declared victim organizations from the States. Abnormal amount compared
+to the United Kingdom, Canada and the others. The three most active RaaS groups’ leak sites revealed it targeted North America the most, but also focused on Europe and the Asia Pacific region.
+
+![image](https://github.com/user-attachments/assets/b711d3a5-32d0-4790-af8c-9b0ca390f4b1)
 
 
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+## Industry Focus: Financial Sector Under Fire
+At this point, we know the share of financial organizations worldwide hit by ransomware attacks from 2021 to 2024. We know LockBit is one of the most active ransomware actors using RaaS models to expand their activities and genes. We notice the United States, especially North America, is targeted number 1 by LockBit. Now, let's correlate our data even more and look into the top six industries
+targeted by ransomware families in Q1 of 2024.
 
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+After we revealed that LockBit is one of the most active ransomware threat actors for the Financial industry, expanding and developing more every year, we have to understand how to defend our systems. For solving this we need to understand how the LockBit operator works on the surface. 
+![image](https://github.com/user-attachments/assets/230bee11-4e7d-456e-99a1-7fa88b11335a){: .right }
 
-Where does it come from?
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 
-Where can I get some?
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
