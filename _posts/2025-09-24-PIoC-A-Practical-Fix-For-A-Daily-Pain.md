@@ -17,6 +17,9 @@ You get one feed with 50 indicators in a CSV. Another feed comes in with 38 more
 
 I eventually came to understand that this was not just something annoying but rather a structural issue of how threat intel gets consumed. I built a small tool to take care of the part that always bugged me.
 
+<img width="1531" height="640" alt="image" src="https://github.com/user-attachments/assets/e27a870f-74d3-4725-933f-52897d93ab4e" />
+
+
 
 ## What PIoC Does
 > PIoC (Pretty Indicators of Compromise) focuses on one thing:
@@ -41,7 +44,10 @@ It doesn’t try to do everything. It just makes sure the starting point of the 
 
 ## Why the API Matters
 
-At first, I wanted a GUI to quickly paste or upload feeds. But real workflows aren’t manual — they’re automated. 
+<img width="1306" height="414" alt="image" src="https://github.com/user-attachments/assets/e231b2a0-02dc-441a-9f37-f270f4b9b01f" />
+
+
+At first, I wanted a GUI to quickly paste or upload feeds. But real workflows aren’t manual - they’re automated. 
 That’s why PIoC also has a separate API service, which means it can sit at the start of a bigger process.
 
 Receive a feed.
@@ -49,10 +55,10 @@ Detect indicator types.
 Check if they already exist.
 Normalize and refang.
 Store clean results.
-Validate against false positives (like Cloudflare — something I plan to strengthen further).
+Validate against false positives (like Cloudflare - something I plan to strengthen further).
 Send the findings to SIEM, XSOAR, or other relevant systems.
 
-This way, PIoC doesn’t try to “be everything.” It’s just the first filter — the one that saves analysts from doing the same work twice.
+This way, PIoC doesn’t try to “be everything.” It’s just the first filter - the one that saves analysts from doing the same work twice.
 
 ## Looking Ahead
 I’m planning to add a validation engine that goes deeper into separating truly malicious IoCs from legitimate infrastructure. Because no one wants to be the person who blocked a core CDN by accident.
