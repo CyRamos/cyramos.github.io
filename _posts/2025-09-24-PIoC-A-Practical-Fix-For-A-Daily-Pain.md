@@ -1,6 +1,6 @@
 ---
 title: "PIoC: A Practical Fix for a Daily Pain"
-date: 2025-09-24 18:00:00 +0300
+date: 2025-09-24 19:40:00 +0300
 categories: [Threat Intelligence]
 tags: [IoC, Threat Intel, SOC, Automation]
 ---
@@ -24,11 +24,17 @@ I eventually came to understand that this was not just something annoying but ra
 > take messy, broken, redundant IoCs and make them clean, consistent, and usable.
 
 📤 Upload a feed (CSV, JSON, STIX).
+
 🔍 Extract the indicators and classify them (domains, IPs, hashes, emails).
+
 🛡️ Refang them (hxxp → http, [.] → .).
+
 🔗 Check against what’s already in the database.
+
 💾 Store only what’s new.
+
 📊 Show the difference so you can instantly see what just arrived.
+
 🏥 Run basic health checks to avoid obvious false positives.
 
 It doesn’t try to do everything. It just makes sure the starting point of the pipeline is clean, consistent, and less error-prone.
@@ -56,5 +62,6 @@ I’m planning to add a validation engine that goes deeper into separating truly
 PIoC wasn’t born as a product idea. It started as me being frustrated with wasted time and duplicate work.
 Now it’s a small tool that helps keep threat intel feeds manageable, reduces errors, and frees up time for the parts of the job that actually require human judgment.
 
-Checkout yourself : <pioc.cyterous.com>
+Checkout yourself : https://pioc.cyterous.com
+
 Github : <https://github.com/CyRamos/PIoC/>
