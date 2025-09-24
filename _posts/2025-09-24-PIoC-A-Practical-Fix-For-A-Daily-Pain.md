@@ -5,7 +5,6 @@ categories: [Threat Intelligence]
 tags: [IoC, Threat Intel, SOC, Automation]
 ---
 
-# PIoC: A Practical Fix for a Daily Pain
 On paper, working with multiple threat intelligence feeds / vendors sounds great. More visibility, more coverage, more data.
 But in practice, it often turns into a daily headache.
 
