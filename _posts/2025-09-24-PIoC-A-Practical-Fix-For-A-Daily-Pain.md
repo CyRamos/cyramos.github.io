@@ -61,6 +61,7 @@ I’m planning to add a validation engine that goes deeper into separating truly
 PIoC wasn’t born as a product idea. It started as me being frustrated with wasted time and duplicate work.
 Now it’s a small tool that helps keep threat intel feeds manageable, reduces errors, and frees up time for the parts of the job that actually require human judgment.
 
-Checkout yourself : https://pioc.cyterous.com
+**Checkout yourself** : 
 
+PIoC : <https://pioc.cyterous.com>
 Github : <https://github.com/CyRamos/PIoC/>
