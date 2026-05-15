@@ -2,7 +2,7 @@
 title: "I Built a Home SIEM - Here's What Wazuh Taught Me"
 date: 2026-04-09
 categories: [Blue Team, Home Lab]
-tags: [wazuh, siem, detection-engineering, homelab]
+tags: [wazuh, siem, detection-engineering, homelab, SOC]
 description: "How I deployed Wazuh 4.14.4 on a home VM, what broke along the way, and how a full disk turned into a working SIEM in a few hours."
 ---
 
@@ -133,7 +133,3 @@ You test rules with `wazuh-logtest` - a tool that lets you feed a raw log line m
 If you work in security and haven't run a home SIEM - it's worth doing. Not because you're going to catch an APT on your laptop, but because you understand the tools on a completely different level when you're the one who built them.
 
 The thing that surprised me most: how much broke along the way - and how much I learned from exactly that.
-
----
-
-*Questions? Found something off? Hit me on [Twitter/X](https://x.com/cyterous) or [LinkedIn](https://linkedin.com/in/tomer-zamir).*
