@@ -12,14 +12,8 @@ Most of my previous posts are shorter and more focused. This one is different be
 If you are interested in AI, personal knowledge systems, automation, or just the problem of saving too much information and never using it again, I think it is worth the read.
 
 <details>
-  <summary>לחץ כאן להרחבת המידע</summary>
-  <p>כאן נכנס הטקסט המוסתר שיופיע רק לאחר לחיצה.</p>
-</details>
-
-
-## TL;DR
-
-I am building a personal data pipeline for turning saved content into structured, searchable, reusable knowledge.
+  <summary>## TL;DR</summary>
+  <p>I am building a personal data pipeline for turning saved content into structured, searchable, reusable knowledge.
 
 The system takes sources like YouTube videos, Instagram reels, carousel posts, articles, and course lessons, creates raw transcripts, processes them with a custom summary skill, stores them in Obsidian with consistent metadata, and exposes them through dashboards, queries, and eventually direct AI access.
 
@@ -28,6 +22,10 @@ The goal is not to save more information.
 The goal is to make saved information useful again.
 
 Long term, I would like to package and share this process so others can install something similar for themselves. Right now, that is not straightforward because parts of the setup depend on local machines, my Obsidian environment, and a VPS-based infrastructure.
+</p>
+</details>
+
+
 
 Most people do not need another place to save information.
 
