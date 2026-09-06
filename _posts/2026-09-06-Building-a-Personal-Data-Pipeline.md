@@ -11,6 +11,12 @@ Most of my previous posts are shorter and more focused. This one is different be
 
 If you are interested in AI, personal knowledge systems, automation, or just the problem of saving too much information and never using it again, I think it is worth the read.
 
+<details>
+  <summary>לחץ כאן להרחבת המידע</summary>
+  <p>כאן נכנס הטקסט המוסתר שיופיע רק לאחר לחיצה.</p>
+</details>
+
+
 ## TL;DR
 
 I am building a personal data pipeline for turning saved content into structured, searchable, reusable knowledge.
