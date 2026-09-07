@@ -95,7 +95,7 @@ A structured, linked, queryable note can start becoming useful.
 That is what I wanted to build.
 
 ---
-### The Four Major Parts
+## The Four Major Parts
 The system has four major parts.
 
 ### 1. Intake and Processing
@@ -190,3 +190,56 @@ Another option is to surface them inside a Hearth dashboard first, so I can revi
 
 I have not fully decided which path is better yet. Full automation is tempting, but review-based processing may be safer for personal notes.
 [IMAGE: Quick Draft widget / mobile capture flow]
+
+---
+
+## Auto-Summary
+The first major implementation piece is Auto-Summary.
+The flow is roughly:
+```text
+source URL
+  -> Auto-Summary dashboard
+    -> download or extract source
+      -> send to transcription
+        -> create raw transcript
+          -> run custom summary skill
+            -> create structured summary
+              -> add metadata
+                -> link transcript and summary
+                  -> expose in dashboards
+```
+
+Right now, part of this flow is handled through an Auto-Summary dashboard, but I do not want the dashboard to be the only entry point.
+
+The next step is to expose the pipeline through a webhook.
+The idea is simple: I should be able to send a link from Telegram, or another quick input channel, and let the system handle the rest automatically: extract the source, generate the transcript, create the summary, add metadata, and place it in the right processing flow.
+
+For video sources, the transcript is created from the actual source content. It becomes its own note, with metadata that marks it as a transcript.
+```yaml
+type:
+  - transcript
+source: youtube
+url: https://example.com/video
+```
+Then the custom summary skill processes that raw transcript and creates a separate summary note.
+Example:
+```YAML
+type:
+  - summary
+source: youtube
+url: https://example.com/video
+tags:
+  - finance
+  - idea_mining
+```
+
+This separation is important.
+
+The raw transcript remains available.
+The summary becomes readable and structured.
+The metadata makes it queryable.
+The links make it part of the graph.
+
+A normal AI summary gives me an answer.
+
+This gives me an artifact I can reuse.
