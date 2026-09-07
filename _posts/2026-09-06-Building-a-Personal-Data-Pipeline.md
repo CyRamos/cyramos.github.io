@@ -98,7 +98,7 @@ That is what I wanted to build.
 ## The Four Major Parts
 The system has four major parts.
 
-### 1. Intake and Processing
+### 1. Intake and Processing (Auto-Summary)
 
 This is the layer that turns external content into structured notes.
 It handles sources like YouTube videos, Instagram reels, carousel posts, articles, course lessons, and other web or social content.
@@ -144,27 +144,9 @@ If a dashboard only looks good but does not help me retrieve, compare, review, o
 
 <img width="1481" height="1062" alt="image" src="https://github.com/user-attachments/assets/17013c84-4cf5-44fd-841e-966394802556" />
 
-
 ---
 
-### 3. Direct Access
-The other way to access the data is through [Hermes](https://github.com/nousresearch/hermes-agent).
-This is different from dashboards.
-Dashboards are visual. Hermes is conversational.
-The idea is that I can talk directly with my notes and ask questions over the data.
-But there is an important safety boundary: Hermes does not get write access to the original vault.
-
-The setup uses a one-way Syncthing mirror. Obsidian stays local and remains the source of truth. A local folder is projected toward the server side, where Hermes can read and analyze the notes, but it cannot write back into the live vault.
-
-That gives me a safer way to ask questions over personal data without giving an external agent full control over the source.
-
-This deserves its own post, because it touches permissions, sync direction, trust boundaries, and how much access an AI agent should have to personal data.
-
-<img width="1743" height="902" alt="image" src="https://github.com/user-attachments/assets/1badb614-1fb8-4279-b00e-a9326e258358" />
-
----
-
-### 4. Quick Capture
+### 3. Quick Capture
 The fourth part is fast capture from mobile.
 Sometimes I do not want to process anything yet. I just want to capture a thought, link, screenshot, or idea before it disappears.
 For that, I use the [Quick Draft](https://quickdraftcapture.app/) widget.
@@ -193,18 +175,29 @@ Another option is to surface them inside a Hearth dashboard first, so I can revi
 
 I have not fully decided which path is better yet. Full automation is tempting, but review-based processing may be safer for personal notes.
 
-<img width="285" height="316" alt="telegram-cloud-photo-size-4-5832264691609178196-m" src="https://github.com/user-attachments/assets/61dba667-a9b0-4aa3-80d1-fe09dbfbedea" />
-
-<img width="521" height="1280" alt="telegram-cloud-photo-size-4-5832264691609178197-y" src="https://github.com/user-attachments/assets/8fd48e08-ef25-47ee-8ad8-41bf6bca9257" />
-
 <div style="display: flex; gap: 10px; justify-content: center; align-items: flex-start;">
   <img style="max-height: 400px; width: auto;" alt="..." src="https://github.com/user-attachments/assets/61dba667-a9b0-4aa3-80d1-fe09dbfbedea" />
   <img style="max-height: 400px; width: auto;" alt="..." src="https://github.com/user-attachments/assets/8fd48e08-ef25-47ee-8ad8-41bf6bca9257" />
 </div>
 
 ---
+### 4. Direct Access
+The other way to access the data is through [Hermes](https://github.com/nousresearch/hermes-agent).
+This is different from dashboards.
+Dashboards are visual. Hermes is conversational.
+The idea is that I can talk directly with my notes and ask questions over the data.
+But there is an important safety boundary: Hermes does not get write access to the original vault.
 
-## Auto-Summary
+The setup uses a one-way Syncthing mirror. Obsidian stays local and remains the source of truth. A local folder is projected toward the server side, where Hermes can read and analyze the notes, but it cannot write back into the live vault.
+
+That gives me a safer way to ask questions over personal data without giving an external agent full control over the source.
+
+This deserves its own post, because it touches permissions, sync direction, trust boundaries, and how much access an AI agent should have to personal data.
+
+<img width="1743" height="902" alt="image" src="https://github.com/user-attachments/assets/1badb614-1fb8-4279-b00e-a9326e258358" />
+
+---
+## Auto-Summary (in-depth & what next?)
 The first major implementation piece is Auto-Summary.
 The flow is roughly:
 ```text
@@ -236,7 +229,7 @@ url: https://example.com/video
 Then the custom summary skill processes that raw transcript and creates a separate summary note.
 Example:
 
-```YAML
+```yaml
 type:
   - summary
 source: youtube
@@ -302,6 +295,7 @@ tags:
   - finance
   - idea_mining
 ```
+
 That distinction keeps the system clean.
 
 ---
@@ -317,7 +311,9 @@ This does not mean the note is an idea.
 It means the note is raw material for future ideas.
 Later, I can query this layer:
 
-```query
+Dataview Example Query:
+
+```text
 TABLE source AS "Source", url AS "URL", file.mtime AS "Updated"
 WHERE contains(type, "summary")
   AND contains(tags, "finance")
@@ -388,5 +384,4 @@ The long-term direction is to make this easier to package, install, and reuse, s
 The goal is not to remember everything.
 The goal is to build a system where important information can come back when it matters.
 
-
-
+Thanks for sticking with this one - I know it was a long guide, but hopefully clear enough to actually implement. If you're building something similar and get stuck, feel free to reach out.
