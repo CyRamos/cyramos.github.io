@@ -11,7 +11,7 @@ Most of my previous posts are shorter and more focused. This one is different be
 
 If you are interested in AI, personal knowledge systems, automation, or just the problem of saving too much information and never using it again, I think it is worth the read.
 
-######
+
 <blockquote class="prompt-info">
   <details>
     <summary><h3 style="display: inline; margin: 0; color: var(--prompt-info-text-color);">TL;DR</h3></summary>
@@ -30,26 +30,7 @@ If you are interested in AI, personal knowledge systems, automation, or just the
 </blockquote>
 
 
-######
-<details>
-  <summary><h3>TL;DR</h3></summary>
-  <p>I am building a personal data pipeline for turning saved content into structured, searchable, reusable knowledge.
-
-The system takes sources like YouTube videos, Instagram reels, carousel posts, articles, and course lessons, creates raw transcripts, processes them with a custom summary skill, stores them in Obsidian with consistent metadata, and exposes them through dashboards, queries, and eventually direct AI access.
-
-The goal is not to save more information.
-
-The goal is to make saved information useful again.
-
-Long term, I would like to package and share this process so others can install something similar for themselves. Right now, that is not straightforward because parts of the setup depend on local machines, my Obsidian environment, and a VPS-based infrastructure.
-</p>
-</details>
-
-
-
-Most people do not need another place to save information.
-
-They already have too many.
+Most people have too many places they save information.
 
 A WhatsApp group with themselves. Instagram saved collections. Facebook saved posts. YouTube Watch Later. Browser bookmarks. Screenshots. Notes apps. Random documents. Maybe even an Obsidian vault, a Notion dashboard, or something they call a second brain.
 
@@ -75,7 +56,8 @@ Not another place to dump information.
 
 A pipeline that turns personal data into something I can actually use.
 
-[IMAGE: Main architecture diagram showing social/web sources, Auto-Summary, Obsidian, Hermes, Syncthing, and Quick Draft]
+<img width="4500" height="3840" alt="image" src="https://github.com/user-attachments/assets/8aa2ff39-1955-4f4e-9281-c09774fb2900" />
+
 
 ---
 
@@ -104,4 +86,107 @@ capture
             -> query
               -> reuse
 ```
+That lifecycle is the real difference.
+A saved video is not knowledge.
+A transcript is better, but still raw.
+A summary is better, but still limited if it is isolated.
+A structured, linked, queryable note can start becoming useful.
 
+That is what I wanted to build.
+
+---
+### The Four Major Parts
+The system has four major parts.
+
+### 1. Intake and Processing
+
+This is the layer that turns external content into structured notes.
+It handles sources like YouTube videos, Instagram reels, carousel posts, articles, course lessons, and other web or social content.
+The important part is that the system does not jump directly from source to summary.
+First, it extracts the raw content and creates a full transcript note.
+The transcript is the raw data layer: the closest version I have to what was actually said or shown in the source.
+Only after that, I run a custom summary skill over the transcript.
+That skill does more than summarize. It extracts:
+- main concepts
+- practical ideas
+- tools mentioned
+- step-by-step workflows, when the source contains them
+- relevant connections to existing Obsidian notes
+- bidirectional links between the summary, transcript, and related notes
+
+The transcript is raw data.
+The summary is interpretation.
+I want both.
+
+{[IMAGE: Screenshot of Auto-Summary UI or terminal/process view]
+[IMAGE: Screenshot of transcript note in Obsidian]
+[IMAGE: Screenshot of summary note linking back to transcript]}
+
+---
+### 2. Exploration and Correlation
+
+Once the notes exist, I need a way to explore them.
+This is where Obsidian, metadata, Dataview, Bases, Hearth dashboards, and MOCs come in.
+The goal is not to create pretty dashboards for the sake of dashboards. The goal is to expose useful questions:
+
+- What did I recently process?
+- Which sources are still waiting for review?
+- Which finance sources are useful for idea mining?
+- Which tools appear across multiple sources?
+- Which summaries are connected to transcripts?
+- Which topics are starting to repeat?
+
+Dashboards are useful only if they help me act.
+If a dashboard only looks good but does not help me retrieve, compare, review, or generate ideas, it is decoration.
+
+{[IMAGE: Home dashboard in Hearth]
+[IMAGE: Research dashboard showing tools / summaries / idea-mining material]
+[IMAGE: Learning HUB dashboard]}
+
+---
+
+### 3. Direct Access
+The second way to access the data is through Hermes.
+This is different from dashboards.
+Dashboards are visual. Hermes is conversational.
+The idea is that I can talk directly with my notes and ask questions over the data.
+But there is an important safety boundary: Hermes does not get write access to the original vault.
+
+The setup uses a one-way Syncthing mirror. Obsidian stays local and remains the source of truth. A local folder is projected toward the server side, where Hermes can read and analyze the notes, but it cannot write back into the live vault.
+
+That gives me a safer way to ask questions over personal data without giving an external agent full control over the source.
+
+This deserves its own post, because it touches permissions, sync direction, trust boundaries, and how much access an AI agent should have to personal data.
+[IMAGE: Obsidian -> Syncthing -> Hermes read-only architecture]
+
+---
+
+### 4. Quick Capture
+The fourth part is fast capture from mobile.
+Sometimes I do not want to process anything yet. I just want to capture a thought, link, screenshot, or idea before it disappears.
+For that, I use the Quick Draft widget.
+
+This is the fast input layer.
+
+The point is not that quick capture solves everything. It does not. Quick capture can easily become another dead inbox if nothing happens after capture.
+The key is that quick capture feeds the same pipeline.
+
+```text
+phone
+  -> Quick Draft
+    -> inbox / staging
+      -> processing
+        -> metadata
+          -> dashboards
+            -> reuse
+```
+
+Capture is only useful if it has a path back into the system.
+In the future, I want this inbox to become more active.
+
+One option is to run a scheduled job that periodically scans quick captures, identifies what each item is, and turns them into proper notes with metadata and links.
+
+Another option is to surface them inside a Hearth dashboard first, so I can review and approve what should happen next.
+
+I have not fully decided which path is better yet. Full automation is tempting, but review-based processing may be safer for personal notes.
+[IMAGE: Quick Draft widget / mobile capture flow]
