@@ -5,7 +5,13 @@ categories: [Automation]
 tags: [AI, Obsidian, Data Pipeline, PKM, Personal Knowledge Management]
 ---
 
-https://drive.google.com/file/d/1kBdX34CjIRIEewsh3YAnSCnIrg9D-Enr/view?usp=sharing
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1em 0;">
+  <iframe src="https://drive.google.com/file/d/1kBdX34CjIRIEewsh3YAnSCnIrg9D-Enr/preview"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          allow="autoplay"
+          allowfullscreen>
+  </iframe>
+</div>
 
 A small note before we start: this post is longer than my usual posts.
 
