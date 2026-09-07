@@ -5,6 +5,8 @@ categories: [Automation]
 tags: [AI, Obsidian, Data Pipeline, PKM, Personal Knowledge Management]
 ---
 
+https://drive.google.com/file/d/1kBdX34CjIRIEewsh3YAnSCnIrg9D-Enr/view?usp=sharing
+
 A small note before we start: this post is longer than my usual posts.
 
 Most of my previous posts are shorter and more focused. This one is different because it goes deeper into the full process: the problem, the architecture, the tradeoffs, the mistakes, and the direction this system is heading.
