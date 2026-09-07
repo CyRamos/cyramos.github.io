@@ -244,3 +244,133 @@ The links make it part of the graph.
 A normal AI summary gives me an answer.
 
 This gives me an artifact I can reuse.
+
+---
+
+## Metadata Is the Backbone
+At some point, I realized the system could not depend only on folders.
+Folders are useful for human navigation, but they are not reliable enough as the main query layer.
+
+A finance-related note might not live in the finance folder.
+A project might be a Canvas file.
+A tool might appear in a course, a video, and a personal idea.
+A useful source might be stored somewhere unexpected.
+
+So the metadata needed to become consistent.
+The current schema is intentionally small:
+
+```yaml
+type: summary | transcript | tool | lesson | course | book | game | project | idea | journal | dream | quotes | cheatsheet | vault_rules
+source: youtube | instagram | article | podcast | book | clippings | webinar | lecture
+status: inbox | wip | review | done | archived
+origin.date: YYYY-MM-DD
+tags:
+```
+
+The logic is simple:
+| Field | Meaning |
+|---|---|
+| `type` | What kind of note this is |
+| `source` | Where the information came from |
+| `status` | Processing state |
+| `origin.date` | Original date represented by the note |
+| `tags` | Broad topics or contexts |
+
+For example, a processed YouTube video about investing is not type: video.
+The note is a summary.
+The source is YouTube.
+The context might be finance and idea mining.
+
+```yaml
+type:
+  - summary
+source: youtube
+tags:
+  - finance
+  - idea_mining
+```
+That distinction keeps the system clean.
+
+---
+## Idea Mining
+One of the most useful contexts in the system is idea_mining.
+Not every summary has the same purpose.
+Some summaries are learning material. A Dataview guide, a note-taking method, a course lesson.
+
+Other summaries are opportunity material. They may describe a tactic, tool, workflow, business model, investment idea, or market pattern.
+
+Those notes get tagged with `idea_mining`.
+This does not mean the note is an idea.
+It means the note is raw material for future ideas.
+Later, I can query this layer:
+
+```dataview
+TABLE source AS "Source", url AS "URL", file.mtime AS "Updated"
+WHERE contains(type, "summary")
+  AND contains(tags, "finance")
+  AND contains(tags, "idea_mining")
+SORT file.mtime DESC
+```
+
+Now the system can answer questions like:
+- Which finance sources are part of idea mining?
+- Which tools repeat across these sources?
+- Which summaries came from YouTube?
+- Which ideas connect finance and AI?
+- Which sources are worth revisiting?
+
+This is where the value starts to appear.
+Not in saving more information.
+In creating the conditions for correlation.
+
+[IMAGE: Dataview or Bases table filtered by finance + idea_mining]
+
+---
+## Rules for AI Agents
+A system like this breaks quickly if every AI agent invents its own structure.
+So I maintain rule files.
+
+They explain how the vault works, which metadata fields to use, how transcripts should behave, when to create tool notes, and what not to touch.
+
+Some of the important files are:
+| File | Role |
+|---|---|
+| `AGENTS.md` | General rules for AI agents working with the vault |
+| `CLAUDE.md` | Claude-specific operating rules |
+| `01_System/Me.md` | Personal context and working preferences |
+| `01_System/Vault-map.md` | Navigation map for the vault |
+| `01_System/tool-routing.md` | Which system or tool should be used for which task |
+| `01_System/skill-map.md` | Available skills and workflows |
+| Auto-Summary rules | How transcripts and summaries should be created |
+
+This makes the system more stable.
+The AI does not need to guess whether `youtube` belongs in `type` or `source`.
+It does not need to guess whether transcripts should be translated.
+It does not need to invent new metadata fields every time.
+
+The rules reduce drift.
+Without rules, AI can create more mess.
+With rules, AI can help maintain structure.
+
+[IMAGE: Screenshot of metadata legend or AGENTS.md / CLAUDE.md rule file]
+
+---
+## Closing Thoughts
+This project started from a simple frustration: I was saving too much information and using too little of it.
+The answer was not another place to save things.
+
+The answer was a better path for information after it enters the system.
+A personal data pipeline is not just a notes setup. It is a way to turn scattered inputs into structured, searchable, reusable context.
+
+The system only works because every piece of information has a path after capture.
+That context can support learning.
+
+It can support research.
+It can support dashboards.
+It can support idea mining.
+
+And eventually, it can support real projects.
+The long-term direction is to make this easier to package, install, and reuse, so the pipeline is not only something that works in my own environment.
+
+The goal is not to remember everything.
+The goal is to build a system where important information can come back when it matters.
