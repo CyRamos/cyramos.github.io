@@ -215,6 +215,7 @@ The next step is to expose the pipeline through a webhook.
 The idea is simple: I should be able to send a link from Telegram, or another quick input channel, and let the system handle the rest automatically: extract the source, generate the transcript, create the summary, add metadata, and place it in the right processing flow.
 
 For video sources, the transcript is created from the actual source content. It becomes its own note, with metadata that marks it as a transcript.
+
 ```yaml
 type:
   - transcript
@@ -268,13 +269,14 @@ tags:
 ```
 
 The logic is simple:
-| Field | Meaning |
-|---|---|
-| `type` | What kind of note this is |
-| `source` | Where the information came from |
-| `status` | Processing state |
+
+| Field         | Meaning                               |
+| :------------ | ------------------------------------: |
+| `type`        | What kind of note this is             |
+| `source`      | Where the information came from       |
+| `status`      | Processing state                      |
 | `origin.date` | Original date represented by the note |
-| `tags` | Broad topics or contexts |
+| `tags`        | Broad topics or contexts              |
 
 For example, a processed YouTube video about investing is not type: video.
 The note is a summary.
@@ -333,15 +335,15 @@ So I maintain rule files.
 They explain how the vault works, which metadata fields to use, how transcripts should behave, when to create tool notes, and what not to touch.
 
 Some of the important files are:
-| File | Role |
-|---|---|
-| `AGENTS.md` | General rules for AI agents working with the vault |
-| `CLAUDE.md` | Claude-specific operating rules |
-| `01_System/Me.md` | Personal context and working preferences |
-| `01_System/Vault-map.md` | Navigation map for the vault |
+| File                        | Role                                               |
+| :-------------------------- | :------------------------------------------------- |
+| `AGENTS.md`                 | General rules for AI agents working with the vault |
+| `CLAUDE.md`                 | Claude-specific operating rules                    |
+| `01_System/Me.md`           | Personal context and working preferences           |
+| `01_System/Vault-map.md`    | Navigation map for the vault                       |
 | `01_System/tool-routing.md` | Which system or tool should be used for which task |
-| `01_System/skill-map.md` | Available skills and workflows |
-| Auto-Summary rules | How transcripts and summaries should be created |
+| `01_System/skill-map.md`    | Available skills and workflows                     |
+| Auto-Summary rules          | How transcripts and summaries should be created    |
 
 This makes the system more stable.
 The AI does not need to guess whether `youtube` belongs in `type` or `source`.
