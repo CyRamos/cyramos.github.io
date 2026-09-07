@@ -376,3 +376,6 @@ The long-term direction is to make this easier to package, install, and reuse, s
 
 The goal is not to remember everything.
 The goal is to build a system where important information can come back when it matters.
+
+<img width="1743" height="902" alt="image" src="https://github.com/user-attachments/assets/1badb614-1fb8-4279-b00e-a9326e258358" />
+
