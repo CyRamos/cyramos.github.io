@@ -137,6 +137,7 @@ The goal is not to create pretty dashboards for the sake of dashboards. The goal
 - Which tools appear across multiple sources?
 - Which summaries are connected to transcripts?
 - Which topics are starting to repeat?
+- Pulls new content from a curated set of RSS feeds 
 
 Dashboards are useful only if they help me act.
 If a dashboard only looks good but does not help me retrieve, compare, review, or generate ideas, it is decoration.
@@ -147,7 +148,7 @@ If a dashboard only looks good but does not help me retrieve, compare, review, o
 ---
 
 ### 3. Direct Access
-The second way to access the data is through Hermes.
+The other way to access the data is through [Hermes](https://github.com/nousresearch/hermes-agent).
 This is different from dashboards.
 Dashboards are visual. Hermes is conversational.
 The idea is that I can talk directly with my notes and ask questions over the data.
@@ -159,12 +160,14 @@ That gives me a safer way to ask questions over personal data without giving an 
 
 This deserves its own post, because it touches permissions, sync direction, trust boundaries, and how much access an AI agent should have to personal data.
 
+<img width="1743" height="902" alt="image" src="https://github.com/user-attachments/assets/1badb614-1fb8-4279-b00e-a9326e258358" />
+
 ---
 
 ### 4. Quick Capture
 The fourth part is fast capture from mobile.
 Sometimes I do not want to process anything yet. I just want to capture a thought, link, screenshot, or idea before it disappears.
-For that, I use the Quick Draft widget.
+For that, I use the [Quick Draft](https://quickdraftcapture.app/) widget.
 
 This is the fast input layer.
 
@@ -189,7 +192,15 @@ One option is to run a scheduled job that periodically scans quick captures, ide
 Another option is to surface them inside a Hearth dashboard first, so I can review and approve what should happen next.
 
 I have not fully decided which path is better yet. Full automation is tempting, but review-based processing may be safer for personal notes.
-[IMAGE: Quick Draft widget / mobile capture flow]
+
+<img width="285" height="316" alt="telegram-cloud-photo-size-4-5832264691609178196-m" src="https://github.com/user-attachments/assets/61dba667-a9b0-4aa3-80d1-fe09dbfbedea" />
+
+<img width="521" height="1280" alt="telegram-cloud-photo-size-4-5832264691609178197-y" src="https://github.com/user-attachments/assets/8fd48e08-ef25-47ee-8ad8-41bf6bca9257" />
+
+<div style="display: flex; gap: 10px; justify-content: center; align-items: flex-start;">
+  <img style="max-height: 400px; width: auto;" alt="..." src="https://github.com/user-attachments/assets/61dba667-a9b0-4aa3-80d1-fe09dbfbedea" />
+  <img style="max-height: 400px; width: auto;" alt="..." src="https://github.com/user-attachments/assets/8fd48e08-ef25-47ee-8ad8-41bf6bca9257" />
+</div>
 
 ---
 
@@ -377,5 +388,5 @@ The long-term direction is to make this easier to package, install, and reuse, s
 The goal is not to remember everything.
 The goal is to build a system where important information can come back when it matters.
 
-<img width="1743" height="902" alt="image" src="https://github.com/user-attachments/assets/1badb614-1fb8-4279-b00e-a9326e258358" />
+
 
