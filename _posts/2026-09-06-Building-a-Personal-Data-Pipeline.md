@@ -12,23 +12,22 @@ Most of my previous posts are shorter and more focused. This one is different be
 If you are interested in AI, personal knowledge systems, automation, or just the problem of saving too much information and never using it again, I think it is worth the read.
 
 ######
-<details>
-  <summary><h3 style="display: inline; margin: 0;">TL;DR</h3></summary>
-  <div markdown="1">
-
-> I am building a personal data pipeline for turning saved content into structured, searchable, reusable knowledge.
->
-> The system takes sources like YouTube videos, Instagram reels, carousel posts, articles, and course lessons, creates raw transcripts, processes them with a custom summary skill, stores them in Obsidian with consistent metadata, and exposes them through dashboards, queries, and eventually direct AI access.
->
-> The goal is not to save more information.
->
-> The goal is to make saved information useful again.
->
-> Long term, I would like to package and share this process so others can install something similar for themselves. Right now, that is not straightforward because parts of the setup depend on local machines, my Obsidian environment, and a VPS-based infrastructure.
-{: .prompt-info }
-
-  </div>
-</details>
+<blockquote class="prompt-info">
+  <details>
+    <summary><h3 style="display: inline; margin: 0; color: var(--prompt-info-text-color);">TL;DR</h3></summary>
+    <div style="margin-top: 1rem;">
+      <p>I am building a personal data pipeline for turning saved content into structured, searchable, reusable knowledge.</p>
+      
+      <p>The system takes sources like YouTube videos, Instagram reels, carousel posts, articles, and course lessons, creates raw transcripts, processes them with a custom summary skill, stores them in Obsidian with consistent metadata, and exposes them through dashboards, queries, and eventually direct AI access.</p>
+      
+      <p>The goal is not to save more information.</p>
+      
+      <p>The goal is to make saved information useful again.</p>
+      
+      <p>Long term, I would like to package and share this process so others can install something similar for themselves. Right now, that is not straightforward because parts of the setup depend on local machines, my Obsidian environment, and a VPS-based infrastructure.</p>
+    </div>
+  </details>
+</blockquote>
 
 
 ######
