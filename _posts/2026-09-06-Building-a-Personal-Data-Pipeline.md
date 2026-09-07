@@ -223,6 +223,7 @@ url: https://example.com/video
 ```
 Then the custom summary skill processes that raw transcript and creates a separate summary note.
 Example:
+
 ```YAML
 type:
   - summary
