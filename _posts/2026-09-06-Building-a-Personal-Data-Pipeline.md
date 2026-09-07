@@ -118,9 +118,11 @@ The transcript is raw data.
 The summary is interpretation.
 I want both.
 
-{[IMAGE: Screenshot of Auto-Summary UI or terminal/process view]
-[IMAGE: Screenshot of transcript note in Obsidian]
-[IMAGE: Screenshot of summary note linking back to transcript]}
+<img width="1564" height="1006" alt="image" src="https://github.com/user-attachments/assets/c248d353-c4a7-47e9-bbc2-21a65df40e94" />
+
+
+<img width="1579" height="996" alt="image" src="https://github.com/user-attachments/assets/7a206c77-9eb8-485b-adcd-efb20d286b8f" />
+
 
 ---
 ### 2. Exploration and Correlation
@@ -139,9 +141,8 @@ The goal is not to create pretty dashboards for the sake of dashboards. The goal
 Dashboards are useful only if they help me act.
 If a dashboard only looks good but does not help me retrieve, compare, review, or generate ideas, it is decoration.
 
-{[IMAGE: Home dashboard in Hearth]
-[IMAGE: Research dashboard showing tools / summaries / idea-mining material]
-[IMAGE: Learning HUB dashboard]}
+<img width="1481" height="1062" alt="image" src="https://github.com/user-attachments/assets/17013c84-4cf5-44fd-841e-966394802556" />
+
 
 ---
 
@@ -157,7 +158,6 @@ The setup uses a one-way Syncthing mirror. Obsidian stays local and remains the 
 That gives me a safer way to ask questions over personal data without giving an external agent full control over the source.
 
 This deserves its own post, because it touches permissions, sync direction, trust boundaries, and how much access an AI agent should have to personal data.
-[IMAGE: Obsidian -> Syncthing -> Hermes read-only architecture]
 
 ---
 
@@ -325,7 +325,7 @@ This is where the value starts to appear.
 Not in saving more information.
 In creating the conditions for correlation.
 
-[IMAGE: Dataview or Bases table filtered by finance + idea_mining]
+<img width="1322" height="1190" alt="image" src="https://github.com/user-attachments/assets/1234117b-225d-4574-b50c-4ad366acbe90" />
 
 ---
 ## Rules for AI Agents
@@ -355,7 +355,6 @@ The rules reduce drift.
 Without rules, AI can create more mess.
 With rules, AI can help maintain structure.
 
-[IMAGE: Screenshot of metadata legend or AGENTS.md / CLAUDE.md rule file]
 
 ---
 ## Closing Thoughts
