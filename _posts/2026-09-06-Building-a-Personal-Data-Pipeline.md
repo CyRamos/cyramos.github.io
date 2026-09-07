@@ -306,7 +306,7 @@ This does not mean the note is an idea.
 It means the note is raw material for future ideas.
 Later, I can query this layer:
 
-```dataview
+```query
 TABLE source AS "Source", url AS "URL", file.mtime AS "Updated"
 WHERE contains(type, "summary")
   AND contains(tags, "finance")
@@ -335,6 +335,7 @@ So I maintain rule files.
 They explain how the vault works, which metadata fields to use, how transcripts should behave, when to create tool notes, and what not to touch.
 
 Some of the important files are:
+
 | File                        | Role                                               |
 | :-------------------------- | :------------------------------------------------- |
 | `AGENTS.md`                 | General rules for AI agents working with the vault |
